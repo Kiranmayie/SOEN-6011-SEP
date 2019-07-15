@@ -1,0 +1,327 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage[normalem]{ulem}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[backend=biber,
+style=numeric,
+sorting=none,
+isbn=false,
+doi=false,
+url=false,
+]{biblatex}\addbibresource{bibliography.bib}
+
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\usepackage[svgnames,table]{xcolor}
+\usepackage{tikz}
+\usepackage{longtable}
+\usepackage{changepage}
+\usepackage{setspace}
+\usepackage{hhline}
+\usepackage{multicol}
+\usepackage{tabto}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{fancyhdr}
+\usepackage[toc,page]{appendix}
+\usepackage[hidelinks]{hyperref}
+\usetikzlibrary{shapes.symbols,shapes.geometric,shadows,arrows.meta}
+\tikzset{>={Latex[width=1.5mm,length=2mm]}}
+\usepackage{flowchart}\usepackage[paperheight=11.0in,paperwidth=8.5in,left=1.0in,right=1.0in,top=1.0in,bottom=1.0in,headheight=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\TabPositions{0.5in,1.0in,1.5in,2.0in,2.5in,3.0in,3.5in,4.0in,4.5in,5.0in,5.5in,6.0in,}
+
+\urlstyle{same}
+
+
+ %%%%%%%%%%%%  Set Depths for Sections  %%%%%%%%%%%%%%
+
+% 1) Section
+% 1.1) SubSection
+% 1.1.1) SubSubSection
+% 1.1.1.1) Paragraph
+% 1.1.1.1.1) Subparagraph
+
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+
+ %%%%%%%%%%%%  Set Depths for Nested Lists created by \begin{enumerate}  %%%%%%%%%%%%%%
+
+
+\setlistdepth{9}
+\renewlist{enumerate}{enumerate}{9}
+		\setlist[enumerate,1]{label=\arabic*)}
+		\setlist[enumerate,2]{label=\alph*)}
+		\setlist[enumerate,3]{label=(\roman*)}
+		\setlist[enumerate,4]{label=(\arabic*)}
+		\setlist[enumerate,5]{label=(\Alph*)}
+		\setlist[enumerate,6]{label=(\Roman*)}
+		\setlist[enumerate,7]{label=\arabic*}
+		\setlist[enumerate,8]{label=\alph*}
+		\setlist[enumerate,9]{label=\roman*}
+
+\renewlist{itemize}{itemize}{9}
+		\setlist[itemize]{label=$\cdot$}
+		\setlist[itemize,1]{label=\textbullet}
+		\setlist[itemize,2]{label=$\circ$}
+		\setlist[itemize,3]{label=$\ast$}
+		\setlist[itemize,4]{label=$\dagger$}
+		\setlist[itemize,5]{label=$\triangleright$}
+		\setlist[itemize,6]{label=$\bigstar$}
+		\setlist[itemize,7]{label=$\blacklozenge$}
+		\setlist[itemize,8]{label=$\prime$}
+
+
+
+ %%%%%%%%%%%%  Header here  %%%%%%%%%%%%%%
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{ 
+\vspace{\baselineskip}
+}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\topsep}{0pt}\setlength{\parskip}{8.04pt}
+\setlength{\parindent}{0pt}
+
+ %%%%%%%%%%%%  This sets linespacing (verticle gap between Lines) Default=1 %%%%%%%%%%%%%%
+
+
+\renewcommand{\arraystretch}{1.3}
+
+
+%%%%%%%%%%%%%%%%%%%% Document code starts here %%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+\textbf{\textcolor[HTML]{0D0D0D}{ID-40092284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  Project F1: arccos(x)\tab \tab \tab SOEN 6011}}\par
+
+
+
+\textbf{PROBLEM 1. PROJECT DESCRIPTION}\par
+
+The arccosine of x is defined as the inverse function of cosine of x where x lies in\par
+
+the range of\par
+
+$-$ 1$ \leq $ x$ \leq $ 1\par
+
+\textbf{Domain and range:}\par
+
+The domain of the arccosine function is from 1 to +1 inclusive\par
+
+and the range is from 0 to radians inclusive (or from 0 to 180). The arccosine functions\par
+
+can be extended to the complex numbers, in which case the domain is all complex\par
+
+numbers.\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 1 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=2.91in,height=4.05in]{image1.png}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 1 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \par
+
+\begin{adjustwidth}{2.0in}{0.0in}
+Figure 1: y = arccos(x)\par
+
+\end{adjustwidth}
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+Characteristics of the function y=arccos(x) that make it unique from another inverse\par
+
+trigonometric functions:\par
+
+1.\  Domain is in the range of [-1,1].\par
+
+2.\  Range is part of [0, $ \pi $ ].\par
+
+3.\  It is neither even or odd function.\par
+
+4.\  It is a decreasing function.\par
+
+
+\vspace{\baselineskip}
+\textbf{PROBLEM 2: REQUIREMENTS}\par
+
+\begin{enumerate}
+	\item The scope of arc cosine function\par
+
+\begin{enumerate}
+	\item Evaluates numerically\par
+
+	\item Evaluates high precision numbers upon 6 digits after the decimal point\par
+
+	\item Evaluates complex numbers\par
+
+	\item Defined for all real values from the interval [-1, +1]\par
+
+	\item Cannot deal with values at infinity\par
+
+	\item Can deal with all the real values from the interval [0, $ \pi $ ].\par
+
+	\item Values of the arccosine function are fixed at few fixed points\par
+
+	\item Value of the arccosine function at 1 is zero
+\end{enumerate}\par
+
+
+\vspace{\baselineskip}
+	\item Identification of Arccosine Function Requirements\par
+
+\begin{enumerate}
+	\item The result should always be in radians\par
+
+	\item For real numbers ranging between -1 to +1, the results should always be in the range of [0, $ \pi $ ].\par
+
+	\item For certain special arguments, Arccos should automatically evaluate to the exact values\par
+
+	\item The function should be suitable for numerical manipulation\par
+
+	\item The function should be evaluated by arbitrary numerical precision\par
+
+	\item The function should return an error message upon infinite value as input\par
+
+
+\vspace{\baselineskip}
+
+\end{enumerate}
+	\item Version Number\par
+
+All the Function requirements have to be implemented in the first version of the build delivery.\par
+
+
+\vspace{\baselineskip}
+	\item Owner\par
+
+Kiranmayie\par
+
+
+\vspace{\baselineskip}
+	\item Stakeholder Priority\par
+
+The requirements listed from ‘a’ to ‘c’ and ‘f’ are of high priority and the rest of the requirements are of low priority. \par
+
+
+\vspace{\baselineskip}
+	\item Risk\par
+
+While implementing the requirements listed from ‘a’ to ‘c’, there are few possible issues. The major issues are the inverse of arc cosine function gives the output as the complex number. Generically  \( f^{-1} \left( f \left( z \right)  \right)  \notin z \) . And near the branch cuts meaning from [$\infty$ , -1] to [1, $\infty$ ], machine-precision inputs can give numerically wrong answers.\par
+
+
+\vspace{\baselineskip}
+	\item Rationale\par
+
+The requirements identified in the Section 2 satisfy all the characteristics of the arc cosine function. \par
+
+
+\vspace{\baselineskip}
+	\item Difficulty\par
+
+The requirements listed from ‘a’ to ‘c’ are difficult to implement as it involves invoking other functionalities such as PI and Strict Math. \par
+
+
+\vspace{\baselineskip}
+	\item Assumptions and Dependency
+
+
+
+To reduce the difficulty and risks involved in this projects, we have assumed that the user doesn’t give any inputs ranging outside the interval of arc cosine function.\par
+
+\vspace{\baselineskip}
+
+\end{enumerate}\par
+
+\vspace{\baselineskip}
+\textbf{PROBLEM 3: PSEUDOCODE}\par
+
+public double acos (double x){\fontsize{13pt}{15.6pt}\selectfont  \\
+\par}$ \{ $ {\fontsize{13pt}{15.6pt}\selectfont  \  \par}\par
+
+//It returns inverse cosine value in degrees \par
+
+// the returned angle is in the range 0.0 through pi \par
+
+\begin{adjustwidth}{0.5in}{0.0in}
+// IF the argument i.e., x is NaN or its absolute value is greater than \ \ \  1, THEN\par
+
+\end{adjustwidth}
+
+\tab \ \ \ \ \ \  //it is applicable only for values between -1 to 1\par
+
+\tab \ \ \ \ \ \  //if the value is other than this it gives error\par
+
+\ \ \ \ \ \ \  // RETURN input error $``$NaN$"$  \par
+
+\ \ \  //ELSE \par
+
+\ \ \ \ \ \ \  // RETURN value of arc cosine of x\par
+
+\ \ \  //END IF\\
+$ \} $ \par
+
+
+\vspace{\baselineskip}
+\begin{justify}
+\textbf{Advantages of the above Pseudocode format}
+\end{justify}\par
+
+\setlength{\parskip}{18.72pt}
+\begin{justify}
+\tab Programming languages are difficult to read for most people, but pseudocode allows nonprogrammers, such as business analysts, to review the steps to confirm the proposed code matches the coding specifications. Some programmers write pseudocode in a separate document, while others write directly in the programming language using comments before the actual code. This provides a handy reference during coding.
+\end{justify}\par
+
+\begin{justify}
+\textbf{Disadvantages of Pseudocode format}
+\end{justify}\par
+
+\begin{justify}
+\tab While pseudocode is easy to read, it does not provide as good a map for the programmer as a flowchart does. It does not include the full logic of the proposed code. Since it is basic by nature, pseudocode sometimes causes nonprogrammers to misunderstand the complexity of a coding project. Pseudocode is by nature unstructured, so the reader may not be able to see the logic in a step.
+\end{justify}\par
+
+\setlength{\parskip}{8.04pt}
+
+
+ %%%%%%%%%%%%  Starting New Page here %%%%%%%%%%%%%%
+
+\newpage
+
+\vspace{\baselineskip}[References]\par
+
+\begin{enumerate}
+	\item \href{https://en.wikipedia.org/wiki/Inverse_trigonometric_functions}{https://en.wikipedia.org/wiki/Inverse\_trigonometric\_functions}\par
+
+	\item https://reference.wolfram.com/language/ref/ArcCos.html
+\end{enumerate}\par
+
+
+\vspace{\baselineskip}
+
+\printbibliography
+\end{document}
